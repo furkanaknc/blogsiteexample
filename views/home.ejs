@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+<div class="container-md mb-4">
+  <div class="border border-4 border-dark rounded-5 p-4">
+    <h1>Home</h1>
+    <p><%= home %></p>
+  </div>
+</div>
+
+<% posts.forEach(function(post) { %>
+<div class="container-md mb-4">
+  <div class="border border-4 border-dark rounded-5 p-4">
+    <h1><%= post.title %></h1>
+    <p>
+      <%= post.content.substring(0, 100) + " ..." %>
+      <a href="/posts/<%= post._id %>">Read More</a>
+    </p>
+  </div>
+</div>
+<% }) %>
+
+<%- include("partials/footer"); -%>
+ 

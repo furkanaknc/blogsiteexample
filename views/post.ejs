@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+
+<div class="content">
+  <h1><%=title%></h1>
+  <div class="overflow-container">
+    <p class="content-text"><%=content%></p>
+  </div>
+</div>
+
+<%- include("partials/footer"); -%>
+
+<style>
+  .overflow-container {
+    max-height: 400px; /* Adjust the value as needed */
+    overflow-y: auto;
+  }
+  
+  .content-text {
+    word-wrap: break-word;
+  }
+</style>
